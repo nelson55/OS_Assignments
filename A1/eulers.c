@@ -1,7 +1,9 @@
 //Part 2: Phi Function
 
 #include <stdio.h>
-#include <math.h>
+#include <string.h>
+
+int array[100] = {1,2};
 
 //Calculate the greatest common denominator of a given value
 int gcd(int a, int b){
@@ -25,10 +27,24 @@ int phi(int n){
     return res;
 }
 
-int main(){
-    
-     
+//Function to get ints from the input string and calulate the Phi value
+void strToPhi(char *str){
+    int n, i = 0, length;
 
-    //printf("phi(%d) = %d\n", n, phi(n));
+    while(sscanf(str, "%d%n", &n, &length) == 1) {
+        printf("Phi of %d is %d\n", n, phi(n));
+        str += length;
+        i++;
+    }
 }
 
+int main(){
+
+    char input[100];
+    
+    printf("Enter a list of positive integers, separated by spaces: ");
+    fgets(input, 100, stdin);
+    strToPhi(input);
+    
+    return 0;
+}
