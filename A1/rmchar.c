@@ -1,29 +1,23 @@
+//Part 3: rmchar
 #include <stdio.h>
 
+//Function to remove a char from a string.
 void rmchar(char* str, char c){
     
-    char *pr = str, *pw = str;
-    while(*pr) {
-        *pw = *pr++;
-        pw += (*pw != c);
+    char *readPtr = str, *writePtr = str;
+    while(*readPtr) {
+        *writePtr = *readPtr++;
+        writePtr += (*writePtr != c);
     }
     
-    *pw = '\0';
+    *writePtr = '\0';
 }
 
 int main()
 {
     
-    char *s;
-    char c;
-    
-    printf("\nEnter a string: ");
-    scanf("%s", &s);
-
-    printf("%s", s);
-
-    printf("\nEnter character to be removed:" );
-    scanf("%c", &c);
+    char s[] = "This is a cool string";
+    char c = 'i';
     
     printf("\nThe string input is %s\nThe removed char is %c", s, c);
     
