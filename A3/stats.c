@@ -76,7 +76,7 @@ int main(int* argc, char *argv[]){
 
   //Check number of args
   if (argc < 2) {
-    printf("Usage: stats int int int...");
+    printf("Usage: stats int int int...\n");
   } else {
 
     //Get an int array from the args
