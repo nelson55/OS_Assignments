@@ -75,7 +75,7 @@ void *getMin(void *arg){
 int main(int* argc, char *argv[]){
 
   //Check number of args
-  if (argc < 1) {
+  if (argc < 2) {
     printf("Usage: stats int int int...");
   } else {
 
