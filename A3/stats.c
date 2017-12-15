@@ -75,14 +75,14 @@ void *getMin(void *arg){
 int main(int* argc, char *argv[]){
 
   //Check number of args
-  if (argc < 2) {
+  if (argc < '2') {
     printf("Usage: stats int int int...\n");
   } else {
 
     //Get an int array from the args
     int *numbers;
 
-     numbers = (int*)calloc(argc,sizeof(int));
+     numbers = (int*)malloc(argc,sizeof(int));
 
     for(int i = 1; i < argc; i++){
       numbers[i - 1] = strtol(argv[i], NULL, 0);
