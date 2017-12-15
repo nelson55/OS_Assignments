@@ -80,7 +80,9 @@ int main(int* argc, char *argv[]){
   } else {
 
     //Get an int array from the args
-    int *numbers = (int*)calloc(argc,sizeof(int));
+    int *numbers;
+
+     numbers = (int*)calloc(argc,sizeof(int));
 
     for(int i = 1; i < argc; i++){
       numbers[i - 1] = strtol(argv[i], NULL, 0);
